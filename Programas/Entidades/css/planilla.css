@@ -1,0 +1,31 @@
+body{
+	background-color: lightgrey;
+}
+.colorContainer{
+	background-color: white;
+	margin-left: 5%;
+	margin-top: 5%;
+	margin-right: 5%;
+}
+.imgLogo{
+	height: 130px;
+}
+.container{
+	margin-bottom: 5%;
+}
+.tabla td input{
+	min-height: 30px;
+}
+.lblFiltro {
+	margin-left: 10px;
+}
+th{
+	text-align: center;
+	vertical-align: middle;
+}
+input[type="text"], input[type="date"], input[type="number"]{
+	border: none;
+	text-align: right;
+	width: 86%;
+	height: 100%;
+}

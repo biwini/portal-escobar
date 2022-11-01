@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fichadas - Reportes</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="css/report.css" />
+        <link rel="stylesheet" href="src/Semantic-UI-CSS-master/semantic.min.css" />
+        <link rel="stylesheet" type="text/css" href="src/DataTables/datatables.min.css"/>
+        <script type="text/javascript" src="src/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="src/DataTables/datatables.min.js"></script>
+        <script type="text/javascript" src="src/dayjs.min.js"></script>
+        <script type="text/javascript" src="src/es.min.js"></script>
+        <script type="text/javascript" src="src/Semantic-UI-CSS-master/semantic.min.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        
+    </head>
+    <body style="padding: 10px;">
+        <div class="ui  form" id='formReport'>
+            <h2 class="ui  header">Reportes</h2>
+            <div class=" fields ">
+                <div class="field ">
+                    <label>Desde</label>
+                    <input type="date" id="fromDate" >
+                </div>
+                <div class="field ">
+                    <label>Hasta</label>
+                    <input type="date" id="toDate" >
+                </div>
+                <div class="field " style="width: 350px;">
+                    <label>Secretaria</label>
+                    <select class="ui search dropdown searchSelect" id="secretary">
+                        <option value="">Todas las Secretarias</option>
+                    </select>
+                </div>
+                <div class="field " style="width: 350px;">
+                    <label>Dependencias</label>
+                    <select class="ui search dropdown searchSelect" id="dependence">
+                        <option value="">Todas las Dependencias</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label>.</label>
+                    <button class="ui button basic primary" id='searchReport'><i class="search icon"></i> Buscar</button>
+                </div>
+                <!-- <div class="field ">
+                    <label>Empleado</label>
+                    <select class="ui search dropdown searchSelect" id="employee">
+                        <option value="">Todos los Empleados</option>
+                    </select>
+                </div> -->
+            <!-- </div>
+            <div class=" fields "> -->
+                
+            </div>
+            
+        </div>
+        <hr>
+        <table id="listEmployee" class="ui celled compact table" style="width:100%">
+            <thead>
+                <tr>
+                    <th><input type="checkbox" id='masterCheckbox'></th>
+                    <th>Apellido y nombre</th>
+                    <th>DNI</th>
+                    <th>Secretaria</th>
+                    <th>Dependencia</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+            <!-- <tfoot>
+                <tr>
+                    <th>Apellido y nombre</th>
+                    <th>DNI</th>
+                    <th>Secretaria</th>
+                    <th>Dependencia</th>
+                </tr>
+            </tfoot> -->
+        </table>
+        <div class="ui info icon message" id='loading' style="display: none;">
+            <i class="notched circle loading icon"></i>
+            <div class="content">
+              <div class="header">
+                Cargando...
+              </div>
+              <p>Se estan buscando los empleados</p>
+            </div>
+        </div>
+        <div class="ui black message" id='msjCreateReport' style="display: none;">
+            <div class="content">
+              <div class="header">
+                <div style="margin-right: 10px;display: inline;">
+                    <label style="margin-right: 10px;">Tipo de reporte</label>
+                    <select id='typeReport' class="ui compact basic dropdown">
+                        <option value='2'>Resumido</option>
+                        <option value='1'>Detallado</option>
+                    </select>
+                </div>
+                -
+                 <button class="ui button basic positive large" id='createReport'><i class="file icon"></i>Generar informe</button>
+              </div>
+              <p> <b id='cantEmployeeSelected'></b> empleados seleccionados</p>
+            </div>
+        </div>
+        <form id="dniForm" action="reporte.php" method="post" target="_blank">
+            <input id="formListEmployee" name="listEmployee" type="hidden" value="">
+        </form>
+    </body>
+</html>

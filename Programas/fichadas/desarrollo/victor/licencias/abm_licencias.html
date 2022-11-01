@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>Licencias</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="src/Semantic-UI-CSS-master/semantic.min.css" />
+        <script type="text/javascript" src="src/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="src/moment-with-locales.js"></script>
+        <script type="text/javascript" src="src/Semantic-UI-CSS-master/semantic.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+
+    </head>
+    <body style="padding: 10px;">
+
+        <div class="ui top attached tabular menu">
+          <a class="item active" data-tab="first">Nueva licencia</a>
+          <a class="item" data-tab="second">Buscar</a>
+        </div>
+        <div class="ui bottom attached tab segment active" data-tab="first">
+            <h1 class="ui header">Licencias de empleados</h1>
+            
+            <div class="ui blue segment  form" id='formulario'>
+                <h3 class="ui right floated header">Datos de la licencia</h3>
+                <div class="inline fields">
+                    <div class="field ">
+                        <label>Codigo</label>
+                        <input type="text" id="codigo">
+                    </div>
+                    <div class=" five wide field">
+                        <label>Descripcion</label>
+                        <div class="ui input">
+                            <input type="text" id="descripcion" placeholder="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ui divider"></div>
+
+                <div class="inline fields">
+                    <div class="five wide field ">
+                        <label>Empleado</label>
+                        <select class="ui search dropdown searchSelect" id="empleado">
+                            <option value="">Seleccione un empleado</option>
+                        </select>
+
+                    </div>
+                </div>
+
+                <div class="inline fields">
+
+                    <div class="two wide field ">
+                        <label>Fecha Inicio</label>
+                        <div class="ui  input">
+                            <input type="date" id="fechainicio" >
+                        </div>
+                    </div>
+                    <div class="two wide field ">
+                        <label>Hora Inicio</label>
+                        <div class="ui  input">
+                            <input type="time"  id="horainicio" placeholder="3128" >
+                        </div>
+                    </div>
+
+                    <div class="two wide field">
+                        <label>Fecha Fin</label>
+                        <div class="ui input">
+                            <input type="date" id="fechafin" placeholder="">
+                        </div>
+                    </div>
+                    <div class="two wide field">
+                        <label>Hora Fin</label>
+                        <div class="ui input">
+                            <input type="time" id="horafin" placeholder="">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="inline fields">
+                    
+                        
+                </div>
+                
+                <div class="ui error message"></div>
+                
+                <div class="ui horizontal divider">
+                    <button class="ui button" id='limpiar_controles'><i class="file outline icon"></i> Nuevo</button>
+                    <button class="ui big center positive basic submit button" id='save_all'><i class="green save icon"></i> Guardar datos</button>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="ui bottom attached tab segment" data-tab="second">
+            <button class="ui  primary basic button" id='verRelojes' style="display: block;"><i class="primary search icon"></i>Ver Licencias</button>
+            <div class="ui segment blue form" id='form_practicas' > 
+                <h3 class="ui right floated header">Listado de licencias</h3>
+
+                <div class="ui error message"></div>
+                <table class="ui very compact table" id='grilla_relojes' >
+                    <thead>
+                        <tr>
+                           <th>Codigo</th>
+                           <th>Empleado</th>
+                           <th>Fecha Licencia</th>
+                           <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                  </table>
+                  
+            </div>
+
+        </div>
+        <div class="ui bottom attached tab segment" data-tab="third">
+          Third
+        </div>
+
+          <!-- HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH PESTAÑA 1 HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH -->
+
+            <!--
+            
+            -->
+
+         <!-- HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH HHHHHHHHHHHHHHHHH  pestaña 2 HHHHHHHHHHHHHHHHHHHHHHH  -->
+            
+
+            <!--
+            
+            -->
+
+     
+
+        
+
+
+
+
+
+    </body>
+</html>

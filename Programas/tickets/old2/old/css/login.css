@@ -1,0 +1,67 @@
+.form-vertical-center{
+	height: auto;
+	width: 100%; 
+	position: absolute;
+	top: 50%;
+	left: 0%;
+	transform: translateY(-50%);
+}
+.form-logo {
+	text-align: center;
+}
+.form-logo img{
+    width: 180px;
+    height: 180px;
+    padding: 20px;
+    border-radius: 50%;
+    background-color: #f1f1f1;
+    margin-bottom: 10px;
+}
+.form-box-message{
+	display: block;
+	height: auto;
+	min-height: 40px;
+}
+.form-message{
+    background-color: #be4b49;
+    color: #fff;
+    width: 100%;
+    font-size: 13px;
+    font-family: helvetica;
+    text-align: center;
+    text-shadow: 0 1px 10px rgba(0, 0, 0, .9);
+    border-radius: 0px 0px 2px 2px;
+    box-shadow: 0 0 0 1px rgba(139, 3, 0, .95), 0 1px 10px rgba(0, 0, 0, .55);
+    margin: 0;
+    padding: 8px;
+    display: none;
+}
+.form-body{
+	margin-top: 4px;
+	margin-bottom: 15px;
+}
+.form-footer{
+	margin: 15px 0;
+}
+.navbar {
+	background: rgb(79,26,132);
+	display: flex;
+	height: 7.2rem;
+	width: 100%;
+	align-items: stretch;
+	border: 1px solid transparent;
+}
+.navbar-header{
+	float: left;
+	width: 23.9rem;
+	height: 100%;
+}
+.navbar-brand {
+  float: left;
+  padding: 15px 15px;
+  font-size: 18px;
+  line-height: 20px;
+}
+.logo{
+	height: 4rem;
+}

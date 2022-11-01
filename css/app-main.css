@@ -1,0 +1,164 @@
+:root{
+	--colorTitle: #4c92d9;
+	--colorTableCell: rgb(243,243,243);
+	--colorTableSelectedTop: rgb(255, 255, 255);
+	--colorTableSelectedBottom: rgb(248, 248, 248);
+	--colorToday: rgba(230,145,56,.8);
+}
+.page-title-bar{
+	padding-bottom: 1.5rem;
+}
+.page-title{
+	font-size: 2.5rem;
+	margin-top: 0;
+	margin-bottom: .5rem;
+	color: var(--colorTitle);
+}
+.title{
+	color: var(--colorTitle);
+}
+.page-subtitle{
+	font-size: 1.5rem;
+	margin-top: 0;
+	margin-bottom: 1rem;
+	color: #888c9b;
+}
+.page-section,.page-title-bar{
+	padding-right: 0;
+	padding-left: 0;
+	width: 100%;
+}
+.modal-title{
+	font-size: 18px;
+	font-weight: 500;
+}
+.modal-body > div:last-child{
+	margin-bottom: 0;
+}
+.close{
+	background: transparent;
+	font-size: 21px;
+	font-weight: 700;
+	color: red;
+	border: transparent;
+}
+.message{
+    position: fixed;
+    top: 2px;
+    left: 3.1%;
+    width: 94%;
+    color: #fff;
+    font-size: 13px;
+    font-family: helvetica;
+    text-align: center;
+    text-shadow: 0 1px 10px rgba(0, 0, 0, .9);
+    border-radius: 0 0 3px 3px;
+    padding: 8px;
+    z-index: 1060;
+    display: none;
+}
+.fail{
+    background-color: #be4b49;
+    box-shadow: 0 0 0 1px rgba(139, 3, 0, .95), 0 1px 10px rgba(0, 0, 0, .55);
+}
+.okey{
+    background-color: #4CE32B;
+    box-shadow: 0 0 0 1px rgba(3, 200, 0, .95), 0 1px 10px rgba(0, 0, 0, .55);
+}
+.btn-add{
+	padding: 1rem 0 2rem;
+	text-align: right;
+}
+
+.table tr th,td{
+	white-space: nowrap;
+}
+.dataTables_scrollHeadInner{
+	width: 100% !important;
+}
+table th{
+    background-color: var(--colorAppAside);
+}
+table#hola .notselectable{
+	vertical-align: middle;
+	background-color: var(--colorAppAside);
+}
+table#hola thead th, table#hola tbody tr {
+	min-width: 29px;
+	vertical-align: middle;
+}
+
+/*----------------------------cambios realizados-----------------------*/
+table#tbHotel tbody tr>td:last-child{
+  text-align: center;
+}
+.ico{
+	width: 15px;
+}
+div[id^="reception-content-piso"] > div{
+	padding: 0 7px;
+	margin-bottom: 14px;
+}
+/*---------------recepcion-------------*/
+.room{
+	padding: 7px;
+	border-radius: 4px;
+	cursor: pointer;
+	color: #fff;
+	opacity: 1;
+}
+.room:hover{
+	box-shadow: 0 0 4px 4px rgba(95,95,95,.5);
+}
+.room-disponible{
+	background-color: rgb(15,143,133);
+}
+.room-ocupado{
+	background-color: rgb(228,95,79);
+}
+.room-reservado{
+	background-color: rgb(255,153,0);
+}
+div#reception-content5 > div{
+	min-height: 106px;
+}
+.back{
+	display: inline-block;
+	padding: 8px 12px;
+	border-radius: 4px;
+	border: 1px solid  #dfe3ea;
+	cursor: pointer;
+}
+.back:hover{
+	background-color:#dfe3ea;
+}
+/*----------------------reservas------------------*/
+.today{
+	background: var(--colorToday);
+	border-color: var(--colorToday) !important;
+}
+.reserva{
+	background: -webkit-linear-gradient(top, var(--colorTableSelectedTop) 0%, var(--colorTableSelectedBottom)) !important;
+	color: inherit;
+	box-shadow: 0 0 3px 3px var(--colorTableCell);
+	padding: 0 !important;
+}
+.datosReserva{
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	white-space: nowrap;
+	overflow: hidden;
+	cursor: pointer;
+	word-break: break-all;
+	position:absolute
+}
+._bar{
+	top: 0;
+	left: 0;
+	right: 0;
+	background: #2E9AFE;
+	height: 4px;
+	position: absolute;
+}

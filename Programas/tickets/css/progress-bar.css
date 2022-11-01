@@ -1,0 +1,149 @@
+/* CSS principal da barra de progresso. Não deve ser alterado. */
+#step-bar-content ol.step-progress-bar {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+#step-bar-content ol.step-progress-bar li {
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    flex: 1 1;
+    position: relative;
+    margin: 0 5px 0;
+}
+#step-bar-content ol.step-progress-bar li span.content-bullet {
+    border-radius: 100%;
+    display: block;
+    text-align: center;
+    transform: translateX(-50%);
+    margin-left: 50%;
+}
+#step-bar-content ol.step-progress-bar li span.content-wrapper {
+    display: inline-block;
+    overflow: visible;
+    width: 100%;
+    padding: 0;
+}
+#step-bar-content ol.step-progress-bar li span.content-stick {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 8px;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+}
+/* Cores. Sinta-se livre para alterar. */
+
+/* Cor padrão.
+   Passado: #2dcd73 (verde) e branco.
+   Presente: #4c92d9 (azul) e branco.
+   Futuro: #dde2e3 (cinza claro) e #869398 (cinza escuro).
+*/
+#step-bar-content ol.step-progress-bar li.step-past *,
+#step-bar-content ol.step-progress-bar li.step-present .content-stick {
+    color: #2dcd73;
+    background: #2dcd73;
+}
+#step-bar-content ol.step-progress-bar li.step-present * {
+    color: #4c92d9;
+    background: #4c92d9;
+}
+#step-bar-content ol.step-progress-bar li .content-bullet {
+    color: white;
+}
+#step-bar-content ol.step-progress-bar li.step-future * {
+    color: #869398;
+    background: #dde2e3;
+}
+#step-bar-content ol.step-progress-bar li .content-wrapper {
+    background: transparent;
+}
+/* Cor especial 1.
+   Passado: vemelho
+   Presente: laranja
+   Futuro: amarelo
+   Cor dos números: azul
+*/
+#step-bar-content ol.step-progress-bar.cor-especial li.step-past *,
+#step-bar-content ol.step-progress-bar.cor-especial li.step-present .content-stick {
+    color: red;
+    background: red;
+}
+#step-bar-content ol.step-progress-bar.cor-especial li.step-present * {
+    color: orange;
+    background: orange;
+}
+#step-bar-content ol.step-progress-bar.cor-especial li.step-future * {
+    color: yellow;
+    background: yellow;
+}
+#step-bar-content ol.step-progress-bar.cor-especial li .content-bullet {
+    color: blue;
+}
+#step-bar-content ol.step-progress-bar.cor-especial li .content-wrapper {
+    background: transparent;
+}
+/* Tamanhos. */
+
+/* Tamanho pequeno:
+   Bolinha de 25px de diâmetro.
+   Fonte 75%.
+   Conector 4px de altura.
+*/
+#step-bar-content ol.step-progress-bar.small li .content-bullet {
+    width: 25px;
+    line-height: 25px;
+}
+#step-bar-content ol.step-progress-bar.small li {
+    font-size: 75%;
+}
+#step-bar-content ol.step-progress-bar.small li .content-stick {
+    top: 12.5px; /* Metade do diâmetro. */
+    height: 4px;
+}
+/* Tamanho médio:
+   Bolinha de 37px de diâmetro.
+   Fonte 100%.
+   Conector 6px de altura.
+*/
+#step-bar-content ol.step-progress-bar.mid li .content-bullet {
+    width: 37px;
+    line-height: 37px;
+}
+#step-bar-content ol.step-progress-bar.mid li {
+    font-size: 100%;
+}
+#step-bar-content ol.step-progress-bar.mid li .content-stick {
+    top: 18.5px; /* Metade do diâmetro. */
+    height: 6px;
+}
+/* Tamanho grande:
+   Bolinha de 49px de diâmetro.
+   Fonte 120%.
+   Conector 8px de altura.
+*/
+#step-bar-content ol.step-progress-bar.large li .content-bullet {
+    width: 70px;
+    line-height: 70px;
+}
+#step-bar-content ol.step-progress-bar.large li {
+    font-size: 125%;
+}
+#step-bar-content ol.step-progress-bar.large li .content-stick {
+    top: 35.5px; /* Metade do diâmetro. */
+    height: 10px;
+}
+.ticket-detail h3{
+    color: #00BFFF;
+}
+.title{
+    /*text-align: left;*/
+    font-size: 20px;
+    color: #00BFFF;
+}
+/*.ticket-detail label{
+    margin-left: 20%;
+}*/

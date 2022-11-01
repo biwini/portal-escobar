@@ -1,0 +1,266 @@
+body{
+	background-color: lightgrey;
+}
+.tabla{
+	border: solid;
+    border-width: 2px;
+    border-right: solid;
+    border-right-width: 2px;
+}
+.tabla thead tr th{
+	border-right: solid;
+	border-right-width: 2px;
+}
+#header {
+  box-sizing: border-box;
+  padding: 10px 15px;
+  display: table;
+  width: 100%;
+  height: 70px;
+}
+
+.logo {
+    background: #000;
+    text-align: center;
+    width: 70px;
+    color: #fff;
+}
+.info{
+	margin: 5px 0 5px;
+}
+p{
+	margin: 0 0 0px;
+}
+a.btn{
+	font-size: 12px !important;
+}
+.logo,
+.menu {
+  vertical-align: middle;
+  display: table-cell;
+}
+
+.menu ul {
+  text-align: right;
+}
+
+.menu ul li {
+  display: inline-block;
+  vertical-align: top;
+}
+.divConsultas{
+	display: block;
+    height: 420px;
+    overflow: auto;
+    width: 100%;
+}
+.tablaConsulta {
+    color: #FFF;
+    display: block;
+    text-decoration: none;
+    width: 100%;
+}
+.txtHeader{
+	text-align: center !important;
+}
+.colorContainer{
+	background-color: white;
+}
+.ContainerPDF{
+	background-color: white;
+	margin-left: 5%;
+	margin-top: 5%;
+	margin-right: 5%;
+}
+.imgLogo{
+	height: 200px;
+}
+.container{
+	margin-bottom: 5%;
+}
+.tablaPrincipal{
+	max-width: 78%;
+	width: 78% !important;
+}
+.tabla-secundaria{
+	max-width: 20% !important;
+}
+.tabla-secundaria tbody tr{
+	height: 47px;
+	min-height: 47px;
+}
+.tablaCondonacion{
+	border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    min-height: 334px;
+	max-height: 334px;
+}
+.tabla table td{
+	min-width: 100px;
+}
+.tabla td input{
+	min-height: 30px;
+}
+.tabla2 table td{
+	min-width: 100px;
+}
+.tabla2 td input{
+	min-height: 30px;
+	text-align: center;
+}
+.tablaFiltros {
+	font-size: 20px;
+}
+.tablaCondonacion td{
+	vertical-align: middle;
+	margin:0px 0px 0px 0px;
+}
+.tablaCondonacion td input{
+	min-height: 30px;
+}
+.tablaBotones tbody tr td{
+        border-top: 0px solid #ddd;
+}
+.btnConsulta{
+	font-size: 20px;
+	width: 50%;
+	height: 50px;
+}
+th{
+	text-align: center;
+	vertical-align: middle;
+}
+.tdInp{
+	width: 119px;
+}
+.inpContrato{
+	font-size: 14px;
+	font-weight: bold;
+	border: none !important;
+	text-align: center !important;
+	width: 100% !important;
+	height: 100% !important;
+}
+input[type="text"], input[type="date"], input[type="number"]{
+	border: none;
+	text-align: right;
+	width: 80%;
+	height: 100%;
+}
+.centrarTexto{
+	padding-top: 50px;
+}
+.tablaDerecha{
+	width: 30px;
+	height: 100%;
+}
+td{
+	vertical-align: middle !important;
+}
+.tdContactado{
+	background-color: yellow;
+	width: 47px !important;
+}
+.lblContactado{
+	transform: rotate(270deg);
+	font-size: 10px;
+}
+.tdNombre{
+	padding-top: 24px !important;
+}
+.tdFecha, .tdNombre{
+	min-width: 400px;
+}
+.trTotal{
+	height: 84px;
+}
+.nombre{
+	font-size: 31px;
+}
+.lblTotal{
+	font-size: 25px;
+}
+.lblTotal2{
+	font-size: 18px;
+}
+.upper{
+	text-transform:uppercase;
+}
+.client-name tbody tr td{
+	border-bottom: solid !important;
+	border-bottom-width: 2px !important;
+}
+.contenido{
+	padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 77%;
+    background-color: white;
+}
+/*.colegio tbody tr td{
+    width: 15%;
+}*/
+.multa tbody tr td{
+    width: 15%;
+}
+.zonificacion tbody tr td{
+    width: 15%;
+}
+
+.nomenclatura tbody tr td{
+    width: 15%;
+}
+.tabla2{
+	width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    display: table;
+    border-color: grey;
+
+}
+.tabla2 thead{
+	border-right: solid !important;
+	border-right-width: 2px !important;
+}
+.tabla2 thead tr th{
+	border-width: 2px;
+	border-right: dotted;
+	border-right-width: 2px;
+	height: 30px !important;
+}
+.tabla2 tbody{
+	border-bottom: solid;
+	border-width: 2px;
+	border-right: solid !important;
+	border-right-width: 2px !important;
+}
+.tabla2 tbody tr td{
+	/*padding-bottom: 5px;
+	padding-top: 5px;*/
+	border-bottom: dotted;
+	border-right: dotted;
+	border-right-width: 2px;
+    border-bottom-width: 2px;
+}
+.tablaTotal tbody tr td{
+    border-right: dotted;
+	border-right-width: 2px;
+}
+.tablaTotal{
+    border-width: 3px !important;
+    border-color: black;
+}
+@media (min-width: 1200px){
+	.container {
+	    width: 970px !important;
+	}
+}
+@media (min-width: 1400px){
+	.container {
+	    width: 1170px !important;
+	}
+}

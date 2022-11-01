@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fichadas - Empleados</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="src/Semantic-UI-CSS-master/semantic.min.css" />
+        <link rel="stylesheet" href="src/paginationjs-master/dist/pagination.css" />
+        <script type="text/javascript" src="src/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="src/moment-with-locales.js"></script>
+        <script type="text/javascript" src="src/paginationjs-master/dist/pagination.min.js"></script>
+        <script type="text/javascript" src="src/Semantic-UI-CSS-master/semantic.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+        
+    </head>
+    <body style="padding: 10px;">
+        <div class="ui top attached tabular menu" id="menuTab">
+            <a class="active item" data-tab="newEmployee" id='buttonTabNewEmployee'>Agregar Empleado</a>
+            <a class="item" data-tab="listEmployee" id='buttonTabListEmployee'>Buscar Empleado</a>
+        </div>
+        <div class="ui bottom attached active tab segment" data-tab="newEmployee" >
+            <div class="ui  form" id='formEmployee'>
+                <h2 class="ui  header">Datos del Empleado</h2>
+                <div class=" fields equal width">
+                    <div class="field ">
+                        <label>Apellido y nombre</label>
+                        <input type="text" id="fullName" >
+                    </div>
+                    <div class="field ">
+                        <label>Nro. Documento</label>
+                        <div class="ui left labeled input">
+                            <div class="ui dropdown label" id="typeDoc">
+                                <input type="hidden" name='typeDoc' value='DNI'>
+                                <div class="text">DNI</div>
+                                <i class="dropdown icon"></i>
+                                <div class="menu">
+                                    <div class='item active selected' data-value="DNI">DNI</div>
+                                    <div class='item' data-value="LC">LC</div>
+                                    <div class='item' data-value="LE">LE</div>
+                                    <div class='item' data-value="LM">LM</div>
+                                    <div class='item' data-value="LF">LF</div>
+                                    <div class='item' data-value="PAS">PAS</div>
+                                    <div class='item' data-value="CI">CI</div>
+                                    <div class='item' data-value="SD">SD</div>
+                                    <div class='item' data-value="RN">RN</div>
+                                </div>
+                            </div>
+                            <input type="number" id="nroDoc" >
+                          </div>
+                    </div>
+                    <div class="field ">
+                        <label>CUIT</label>
+                        <input type="text" id="cuit" >
+                    </div>
+                    <div class="field ">
+                        <label>Legajo</label>
+                        <input type="number" id="legajo" >
+                    </div>
+                    
+                    <div class="field ">
+                        <label>Sexo</label>
+                        <select class="ui  selection dropdown " id="gender">
+                            <option value="">Seleccione un sexo</option>
+                            <option value="M">Masculino</option>
+                            <option value="F">Femenino</option>
+                        </select>
+                    </div>
+                    
+                    
+                </div>
+                <div class=" fields equal width">
+                    <div class="  field ">
+                        <label>Direccion</label>
+                        <input type="text" id="address" >
+                    </div>
+                    <div class="field ">
+                        <label>Fecha de Nacimiento</label>
+                        <input type="date" id="birthDate" >
+                    </div>
+                    <div class="field ">
+                        <label>Correo Electronico</label>
+                        <input type="text" id="email" >
+                    </div>
+                    <div class="field ">
+                        <label>Telefono</label>
+                        <input type="text" id="phone" >
+                    </div>
+                    <div class="field ">
+                        <label>Estado Civil</label>
+                        <select class="ui  selection dropdown " id="stateCivil">
+                            <option value="">Seleccione un estado civil</option>
+                            <option value="S">Soltero</option>
+                            <option value="C">Casado</option>
+                        </select>
+                    </div>
+                    <!-- <div class="field ">
+                        <label>Localidad</label>
+                        <select class="ui  selection dropdown searchSelect " id="locality">
+                            <option value="">Seleccione una localidad</option>
+                        </select>
+                    </div> -->
+                    
+                </div>
+                <div class="fields equal width">
+                    <div class="field ">
+                        <label>Secretaria</label>
+                        <select class="ui search dropdown searchSelect" id="secretary">
+                            <option value="">Seleccione una secretaria</option>
+                        </select>
+                    </div>
+                    <div class="field ">
+                        <label>Dependencias</label>
+                        <select class="ui search dropdown searchSelect" id="dependence">
+                            <option value="">Seleccione una dependencia</option>
+                        </select>
+                    </div>
+                    <div class="field ">
+                        <label>Tipo de Empleado</label>
+                        <select class="ui search dropdown searchSelect" id="employeeTypes">
+                            <option value="">Seleccione un tipo de empleado</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <button class="ui positive basic submit button" id='saveNewEmployee'><i class="green save icon"></i> Agregar Empleado</button>
+                <div id='contentEdit' style="display: none;">
+                    <div class="ui negative message">
+                        <p>
+                            Esta editando informacion de un empleado
+                        </p>
+                    </div>
+                    <input type="hidden" id='idEditEmployee' value=''>
+                    <button class="ui primary basic submit button" id='saveEditEmployee' ><i class="primary edit icon"></i> Guardar Cambios</button>
+                    <button class="ui secondary basic  button" id='cancelEditEmployee' >Cancelar</button>
+                </div>            
+                <div class="ui error message"></div>
+            </div>
+        </div>
+        <div class="ui bottom attached tab segment" data-tab="listEmployee" >
+            <div class="ui   form" id='formSearchEmployee'>
+                <div>
+                    <h2 class="ui header">Listado de Empleados</h2>
+                    <div class="inline fields">
+                        <div class="field"><div id="paginationTable"></div><input type='hidden' id='employeesAmount' value='' ></div>
+                        <div class="field ">
+                            <label>Apellido y nombre</label>
+                            <input type="text" id="searchFullName" >
+                        </div>
+                        <div class="field ">
+                            <button class="ui positive basic button" id='searchEmployee'><i class="green search icon"></i> Buscar</button>
+                            <label class="ui grey  " id='labelEmployeesAmount' ></label>
+                        </div>
+                    </div>
+                </div>
+                <table class="ui very compact celled selectable  table" id='tableEmployeesPaginated' >
+                    <thead>
+                        <tr>
+                        <th>Apellido y nombre</th>
+                        <th>
+                            <div class="ui dropdown searchSelect filterTable" id='filterSecretaryTable'>
+                                <i class="filter icon"></i>
+                                <span class="text">Secretaria</span>
+                                <i class="angle down icon"></i>
+                                <div class="menu">
+                                  <div class="ui icon search input ">
+                                    <i class="search icon"></i>
+                                    <input type="text" placeholder="Search tags...">
+                                  </div>
+                                  <div class="scrolling menu"></div>
+                                </div>
+                            </div>
+                            <i class="close icon pointer closeFilterTable" style="display: none;"></i>
+                        </th>
+                        <th>
+                            <div class="ui dropdown searchSelect filterTable" id='filterDependenceTable'>
+                                <i class="filter icon"></i>
+                                <span class="text">Dependencia</span>
+                                <i class="angle down icon"></i>
+                                <div class="menu">
+                                  <div class="ui icon search input ">
+                                    <i class="search icon"></i>
+                                    <input type="text" placeholder="Search tags...">
+                                  </div>
+                                  <div class="scrolling menu"></div>
+                                </div>
+                            </div>
+                            <i class="close icon pointer closeFilterTable" style="display: none;"></i>
+                        </th>
+                        <th>
+                            <div class="ui dropdown searchSelect filterTable" id='filterEmployeeTypesTable'>
+                                <i class="filter icon"></i>
+                                <span class="text">Tipo de Empleado</span>
+                                <i class="angle down icon"></i>
+                                <div class="menu">
+                                  <div class="ui icon search input ">
+                                    <i class="search icon"></i>
+                                    <input type="text" placeholder="Search tags...">
+                                  </div>
+                                  <div class="scrolling menu"></div>
+                                </div>
+                            </div>
+                            <i class="close icon pointer closeFilterTable" style="display: none;"></i>
+                        </th>
+                        <th>Opciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+    
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>

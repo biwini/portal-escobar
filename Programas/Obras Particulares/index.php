@@ -1,0 +1,1 @@
+<?php header("location: crear-liquidacion.php"); ?>

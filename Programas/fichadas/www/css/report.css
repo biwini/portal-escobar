@@ -1,0 +1,56 @@
+.dt-body-center{
+    text-align: center !important;
+}
+#listEmployee tbody .selected{
+    background-color: #21ba45;
+    color: white;
+    font-weight: bold;
+}
+table,table td,table th, table tr{
+    border-color: rgba(0,0,0,.5) !important;
+}
+table th{
+    text-align: center;
+}
+#tableTotalReport tr th:nth-child(even){
+    text-align: center;
+}
+#tableTotalReport th{
+    background-color: rgba(200,200,200,1);
+}
+#loading{
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    width: 400px;
+}
+.labelFromTo{
+    float: right;
+    margin-right: 20px;
+}
+.header{
+    width: 100%;
+}
+.header span{
+    margin: 0px 20px 0px 20px;
+}
+#msjCreateReport{
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+}
+#msjCreateReport .content{
+    text-align: center;
+}
+.report{
+    margin-bottom: 50px;
+}
+#downloadXls{
+    margin: 10px 0 10px 0;
+}
+input,.searchSelect{
+    border-color: rgba(0,0,0,.3) !important;
+}
+.dropdown .item{
+    font-size: 13px !important;
+}

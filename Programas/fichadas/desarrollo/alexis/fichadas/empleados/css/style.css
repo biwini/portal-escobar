@@ -1,0 +1,10 @@
+
+.widthFull{
+    width: 100% !important;
+}
+.pointer{
+    cursor: pointer !important;
+}
+.closeFilterTable{
+    float: right !important;
+}

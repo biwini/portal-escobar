@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sistema de Fichadas</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="src/Semantic-UI-CSS-master/semantic.min.css" />
+        <script type="text/javascript" src="src/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="src/moment-with-locales.js"></script>
+        <script type="text/javascript" src="src/Semantic-UI-CSS-master/semantic.js"></script>
+        <script type="text/javascript" src="js/horario.js"></script>
+    </head>
+
+    <body style="padding: 10px;">
+    <h1 class="ui header">Horarios Laborales</h1>
+      <div class="ui top attached tabular menu">
+      <a class="item active" data-tab="first">Listado de Horarios</a>
+      <a class="item" data-tab="second">Alta de Horarios</a>
+
+    </div>
+
+    <div class="ui bottom attached tab segment active" data-tab="first" id="tabla_horarios">
+      <button class="ui primary button" style="float:right;">
+      Actualizar
+      </button>
+        <table class="ui very compact table" id='lista_horarios' >
+          <thead>
+              <tr>
+                 <th>Codigo</th>
+                 <th>Descripcion</th>
+                 <th></th>
+              </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+    </div>
+    <div class="ui bottom attached tab segment" data-tab="second">
+        <button class="ui  primary basic button" id='searchAmb' style="display: none;"><i class="primary search icon"></i> Buscar Atenciones</button>
+        <div class="ui blue segment  form" id='form_pac'>
+            <h3 class="ui right floated header">Datos del Horario</h3>
+            <div class="inline fields">
+                <div class=" five wide field">
+                    <label>Horario:</label>
+                    <div class="ui input">
+                        <input type="text" id="horario" placeholder="Codigo horario " size="30">
+                    </div>
+                </div>
+                <div class=" five wide field">
+                    <label>Descripcion:</label>
+                    <div class="ui input">
+                        <input type="text" id="descrip" placeholder="Descripcion del horario " size="100">
+                    </div>
+                </div>
+
+                <div class="field ">
+                    <label>Fecha de comienzo</label>
+                    <input type="date" id="fecha">
+                </div>
+            </div>
+
+            <div class="ui divider"></div>
+
+            <div class="inline fields">
+                <div class="field " >
+                    <label>Tolerancia 1</label>
+                    <input type="number" min="0" maxlength="2" id="tol1" placeholder="Tolerancia 1">
+                </div>
+                <div class="field " >
+                    <label>Tolerancia 2</label>
+                    <div class="ui  input">
+                        <input type="number" min="0" maxlength="2" id="tol2" placeholder="Tolerancia 2">
+                    </div>
+                </div>
+
+            </div>
+            <div class="ui error message"></div>
+        </div>
+        <div class="ui  divider"></div>
+        <div class="ui  divider"></div>
+        <div class="ui segment blue form" id='form_practicas' >
+            <h3 class="ui right floated header">Horarios x dia</h3>
+            <div class="  fields inline" >
+                <label>Dia</label>
+                    <div class="ui icon labeled input">
+                       <select class="ui compact selection dropdown mini label" id="Dia">
+                            <option value="2">Lunes</option>
+                            <option value="3">Martes</option>
+                            <option value="4">Miercoles</option>
+                            <option value="5">Jueves</option>
+                            <option value="6">Viernes</option>
+                            <option value="7">Sabado</option>
+                            <option value="1">Domingo</option>
+                        </select>
+                    </div>
+                    <label> Entrada :</label>
+                    <div class="ui input">
+                    <input type="time" id="e1" placeholder="E 1 " size="5">
+                    </div>
+                    <label> Salida :</label>
+                    <div class="ui input">
+                    <input type="time" id="s1" placeholder="S 1 " size="5">
+                    </div>
+                    <label> Egr. Almuerzo:</label>
+                    <div class="ui input">
+                    <input type="time" id="e2" placeholder="E 2 " size="5">
+                    </div>
+                    <label> Ing. Almuerzo:</label>
+                    <div class="ui input">
+                    <input type="time" id="s2" placeholder="S 2 " size="5">
+                    </div>
+
+
+
+
+                <div class="field">
+                   
+                    <button class="ui positive basic submit button" id='add_Horario'><i class="green plus icon"></i> Agregar Horario dia</button>
+                    <div class="ui reset button" id='resetHorarios' style="display: none;"></div>
+                </div>
+
+            </div>
+            <div class="ui error message"></div>
+            <table class="ui very compact table" id='table_horarios' >
+                <thead>
+                    <tr>
+                       <th>Dia</th>
+                       <th>Entrada</th>
+                       <th>Salida </th>
+                       <th>Egr. Almuerzo </th>
+		                   <th>Ing. Almuerzo </th>
+                       <th>Ex</th>
+                       <th>Sx</th>
+                       <th>P 1</th>
+		                   <th>P 2</th>
+                       <th>P 3</th>
+                       <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+              </table>
+              <div class="ui negative message" id='error_tbl' style='display: none;'>
+                <div class="header">
+                  Debe agregar al menos un horario
+                </div>
+            </div>
+        </div>
+        <div class="ui horizontal divider">
+            <button class="ui basic button" id='limpiar_horario'><i class="icon"></i> Limpiar Datos</button>
+            <button class="ui big center positive basic submit button" id='save_all'><i class="green save icon"></i> Guardar datos</button>
+        </div>
+        <div class="ui modal" id='searchAmbModal'>
+            <div class="header">Buscar un horario</div>
+            <div class="content">
+              <div class="ui form">
+                  <div class="inline fields">
+                      <div class="field">
+                        <label>Fecha</label>
+                        <input type="date" id='searchAmbDate'>
+                      </div>
+                      <div class="field">
+                        <label>Apellido y nombre</label>
+                        <input type="text" id='searchAmbName'>
+                      </div>
+                      <div class="field">
+                        <button class="ui positive basic submit button" id='searchAmbSubmit'><i class="green search icon"></i> Buscar</button>
+                      </div>
+                  </div>
+              </div>
+              <table class="ui very compact table" id='tbl_search_amb'>
+                <thead>
+                    <tr>
+                       <th>Fecha</th>
+                       <th>Nombre</th>
+                       <th>Practicas</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+              </table>
+            </div>
+            <div class="actions">
+              <div class="ui negative basic cancel button">Cancelar</div>
+            </div>
+          </div>
+        </div>
+
+    </body>
+</html>

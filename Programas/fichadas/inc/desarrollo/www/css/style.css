@@ -1,0 +1,14 @@
+#tipo_doc{
+    width: 100px;
+}
+#doc_label_error,#doc_check,#save_pac,#cod_label_error{
+    display: none;
+}
+.widthFull{
+    width: 100% !important;
+}
+#searchAmb{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}

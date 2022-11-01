@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>Relojes biometricos</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="src/Semantic-UI-CSS-master/semantic.min.css" />
+        <script type="text/javascript" src="src/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="src/moment-with-locales.js"></script>
+        <script type="text/javascript" src="src/Semantic-UI-CSS-master/semantic.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+
+    </head>
+    <body style="padding: 10px;">
+        <h1 class="ui header">Relojes biometricos</h1>
+        <button class="ui  primary basic button" id='verRelojes' style="display: block;"><i class="primary search icon"></i> Ver relojes</button>
+        <div class="ui blue segment  form" id='formulario_reloj'>
+            <h3 class="ui right floated header">Datos del reloj</h3>
+            <div class="inline fields">
+
+                <!--
+                <div class="field ">
+                    <label>Especialista</label>
+                    <select class="ui search dropdown searchSelect" id="especialista">
+                        <option value="">Seleccione un especialista</option>
+                    </select>
+                </div>
+                -->
+
+                <!-- <div class="field ">
+                    <label>Especialidad</label>
+                    <select class="ui search dropdown searchSelect" id="sy_id">
+                        <option value="">Seleccione una especialidad</option>
+                    </select>
+                </div> -->
+
+                <div class="field ">
+                    <label>Codigo</label>
+                    <input type="text" id="codigo">
+                </div>
+                <div class=" five wide field">
+                    <label>Descripcion</label>
+                    <div class="ui input">
+                        <input type="text" id="descripcion" placeholder="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="ui divider"></div>
+
+            <div class="inline fields">
+                <!--
+                <div class="field " >
+                    <label>Nro. de documento</label>
+                    <div class="ui icon labeled input">
+                       <select class="ui compact selection dropdown mini label" id="tipo_doc">
+                            <option value="DNI">DNI</option>
+                            <option value="LC">LC</option>
+                            <option value="LE">LE</option>
+                            <option value="LM">LM</option>
+                            <option value="LF">LF</option>
+                            <option value="PAS">PAS</option>
+                            <option value="CI">CI</option>
+                            <option value="SD">SD</option>
+                            <option value="RN">RN</option>
+                        </select>
+                        <input type="number" min="0" id="nro_doc" placeholder="Nro. Documento">
+                        <i class=" green check icon" id='doc_check'></i>
+                    </div>
+                    <div class="ui left pointing red basic label " id='doc_label_error'>
+                        No se encontro al paciente
+                    </div>
+                </div>
+                -->
+
+                <div class="three wide field ">
+                    <label>Dirección IP</label>
+                    <div class="ui  input">
+                        <input type="text" min="0" maxlength="15" id="direccionip" placeholder="192.168.0.1">
+                    </div>
+                </div>
+                <div class="two wide field ">
+                    <label>Puerto</label>
+                    <div class="ui  input">
+                        <input type="text"  id="puerto" placeholder="3128" >
+                    </div>
+                </div>
+                <div class=" five wide field">
+                    <label>Dependencia</label>
+                    <div class="ui input">
+                        <input type="text" id="dependencia" placeholder="">
+                    </div>
+                </div>
+                <!-- <div class="field">
+                    <button class="ui positive basic submit button" id='save_pac'>Guardar</button>
+                </div> -->
+            </div>
+
+            <div class="inline fields">
+                <div class=" five wide field">
+                    <label>Usuario</label>
+                    <div class="ui input">
+                        <input type="text" id="usuario" placeholder="">
+                    </div>
+                </div>
+
+                <div class=" five wide field">
+                    <label>Clave</label>
+                    <div class="ui input">
+                        <input type="text" id="clave" placeholder="">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="inline fields">
+                <div class=" five wide field">
+                    <label>Marca</label>
+                    <div class="ui input">
+                        <input type="text" id="marca" placeholder="">
+                    </div>
+                </div>
+
+                <div class=" five wide field">
+                    <label>Modelo</label>
+                    <div class="ui input">
+                        <input type="text" id="modelo" placeholder="">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="inline fields">
+                <div class=" five wide field">
+                    <label>Ubicacion</label>
+                    <div class="ui input">
+                        <input type="text" id="ubicacion" placeholder="">
+                    </div>
+                </div>
+
+            </div>
+			
+			
+			
+			
+
+            <div class="ui error message"></div>
+			
+			<div class="ui horizontal divider">
+                <button class="ui button" id='limpiar_controles'><i class="file outline icon"></i> Nuevo</button>
+                <button class="ui big center positive basic submit button" id='save_all'><i class="green save icon"></i> Guardar datos</button>
+            </div>
+
+        </div>
+
+        <!--
+        <div class="ui  divider"></div>
+         <div class="ui  divider"></div>
+       -->
+
+        <div class="ui segment blue form" id='form_practicas' >
+            <h3 class="ui right floated header">Listado de relojes</h3>
+            <div class="ui error message"></div>
+            <table class="ui very compact table" id='grilla_relojes' >
+                <thead>
+                    <tr>
+                       <th>Codigo</th>
+                       <th>Descripcion</th>
+                       <th>Dependencia</th>
+                       <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+              </table>      
+        </div>
+    </body>
+</html>

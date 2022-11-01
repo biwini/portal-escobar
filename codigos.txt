@@ -1,0 +1,10 @@
+confimacion:
+
+$("button").on("click",function(){
+   var confirmar = confirm("¿Desea hacer algo con este botón?");
+   if (confirmar){
+      $.post("url-pagina-php",{"action":"descontar"},function(){
+         alert("ya se descontó lo que debía descontar);
+      })
+   }
+})
