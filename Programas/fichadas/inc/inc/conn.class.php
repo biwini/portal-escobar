@@ -6,7 +6,7 @@
 		function __construct(){
       date_default_timezone_set('America/Argentina/Buenos_Aires');
 
-      $serverName = "192.168.122.17";
+      $serverName = "127.0.0.1;
       $database = "Fichadas";
       $uid = "sa";
       $pwd = 'Fu11@c3$*9739';

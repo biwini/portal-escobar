@@ -14,7 +14,7 @@
             date_default_timezone_set('America/Argentina/Buenos_Aires');
 
             // $serverName = ".\SQLEXPRESS";
-            $serverName = "192.168.122.17";
+            $serverName = ".\SQLEXPRESS";
             $database = "Fichadas";
             $uid = "SA";
             // $pwd = '123';

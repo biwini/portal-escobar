@@ -12,7 +12,7 @@
         function __construct(){
             date_default_timezone_set('America/Argentina/Buenos_Aires');
 
-            $serverName = ".\SQLEXPRESS"; # "192.168.122.17";
+            $serverName = ".\SQLEXPRESS"; # "192.168.122.17"; .\SQLEXPRESS
             $database = "Fichadas";
             $uid = "sa";
             $pwd = '123'; # 'Fu11@c3$*9739';

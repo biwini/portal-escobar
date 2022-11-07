@@ -83,7 +83,7 @@
 					</div>
 					<div class="row">
 						<div class="col-md-12">
-							<div class="g-recaptcha" id="captcha" data-sitekey="6Lc0w8wiAAAAANm2fSxnzYtTdQ8BKFA7pVfVAPW_"></div>	
+							<div class="g-recaptcha" id="captcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>	
 							<!-- 6LdEsfcUAAAAACgsRtFXefHmEJiBLPSVMpSj6r9J -->
 						</div>
 					</div>

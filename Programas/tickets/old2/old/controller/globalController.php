@@ -16,7 +16,7 @@
 
 		function __construct(){
             date_default_timezone_set('America/Argentina/Buenos_Aires'); //Configuro un nuevo timezone.
-            $serverName = "192.168.122.17"; //serverName\instanceName
+            $serverName = "127.0.0.1"; //serverName\instanceName
             $database = "PortalEscobar";
             $UID = 'SA';
             $PWD = 'Fu11@c3$*9739';
